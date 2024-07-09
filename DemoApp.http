@@ -1,0 +1,39 @@
+@DemoApp_HostAddress = http://localhost:5289
+
+GET {{DemoApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{DemoApp_HostAddress}}/api/customer
+
+###
+
+POST {{DemoApp_HostAddress}}/api/customer
+Content-Type: application/json
+
+{
+  "FullName": "Yash Harad",
+  "EmailAddress":"Yash@gmail.com",
+  "IsActive": true,
+  "ContactNo": "38974728331"
+}
+
+###
+
+GET {{DemoApp_HostAddress}}/api/customer/1
+
+###
+
+PUT {{DemoApp_HostAddress}}/api/customer/1
+Content-Type: application/json
+
+{
+    "Id":1,
+  "FullName": "Yash",
+  "EmailAddress":"Yash111@gmail.com",
+  "IsActive": true,
+  "ContactNo": "38974731"
+}
+
+###
